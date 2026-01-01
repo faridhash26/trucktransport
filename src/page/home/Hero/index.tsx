@@ -39,7 +39,7 @@ export default function Hero() {
       {/* Bottom service bar */}
       <div className="absolute inset-x-0 bottom-10 md:bottom-12">
         <div className="mx-auto max-w-7xl px-4">
-          <div className="rounded-none md:rounded-md border border-white/15 bg-emerald-700/55 backdrop-blur-md">
+          <div className="rounded-none md:rounded-md   bg-[rgba(42,157,143,0.65)] ">
             <div className="grid grid-cols-2 md:grid-cols-6">
               {services.map((item, idx) => {
                 const Icon = item.icon;
@@ -47,15 +47,17 @@ export default function Hero() {
                   <div
                     key={item.label}
                     className={[
-                      "relative flex items-center justify-center px-6 py-8 md:py-10 text-white",
+                      "relative flex flex-col items-center justify-center px-6 py-8 md:py-10 text-white",
                       "gap-3 md:gap-4",
-                      // vertical separators (desktop)
+
+                      // vertical separators (desktop) -> before
                       idx !== 0
-                        ? "md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-10 md:before:w-px md:before:-translate-y-1/2 md:before:bg-white/20"
+                        ? "md:before:content-[''] md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-20 md:before:w-px md:before:-translate-y-1/2 md:before:bg-white/70"
                         : "",
-                      // horizontal separators (mobile)
+
+                      // horizontal separators (mobile) -> after (تا با before قاطی نشه)
                       idx >= 2
-                        ? "before:absolute before:inset-x-6 before:top-0 before:h-px before:bg-white/15 md:before:hidden"
+                        ? "after:content-[''] after:absolute after:inset-x-6 after:top-0 after:h-px after:bg-white/15 md:after:hidden"
                         : "",
                     ].join(" ")}
                   >
