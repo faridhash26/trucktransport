@@ -1,5 +1,6 @@
 import Footer from "@/src/components/footer";
 import StickyHeader from "@/src/components/header";
+import ScrollToTopProgress from "@/src/components/scrollButton";
 import TopHeader from "@/src/components/topheader";
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
@@ -9,6 +10,7 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
       <StickyHeader />
       {children}
       <Footer />
+      <ScrollToTopProgress />
     </div>
   );
 };
