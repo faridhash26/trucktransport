@@ -18,7 +18,7 @@ export default function StickyHeader() {
         "z-50 transition-all duration-300",
         isSticky
           ? "fixed top-0 left-0 right-0"
-          : "absolute top-6 left-0 right-0",
+          : "absolute top-9 left-0 right-0",
       ].join(" ")}
     >
       {/* Accordion Top Bar (وقتی sticky شد باز میشه) */}
